@@ -1,0 +1,19 @@
+.dataset_list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a.dataset_option{
+    display: block;
+    background-color: rgb(39, 97, 255);
+    color: white;
+    width: 200px;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: red;
+}
+.dataset_option,a:active{
+    background-color: #4fd166;
+}
