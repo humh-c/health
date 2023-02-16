@@ -51,12 +51,11 @@
           <li><a href="1start.html">首页</a></li>
           <li><a href="2project.html">项目特色</a></li>
           <li><a href="3function_show.html">功能展示</a></li>
-          <li class="active"><a href="4dataset_show.html">数据集介绍</a></li>
-          <!-- <li><a href="#pricing">Pricing</a></li> -->
+          <li><a >数据集介绍</a></li>
           <li><a href="5plan.html">计划安排</a></li>
           <li><a href="6member.html">成员</a></li>
-          <li><a href="7result_show.html">成果展示</a></li>
-          <li><a href="8download.html">下载</a></li>
+          <li><a href="7result_show.html">研究成果</a></li>
+          <li><a id="myBtn">下载</a></li>
           <li><a href="9constract_us.html">联系我们</a></li>
 
           <!-- <li class="get-started"><a href="#features">开始</a></li> -->
@@ -143,7 +142,119 @@
 
 
                 <h2 id="Data_number" style="margin-top: 10px;">数据量</h2>
-                <img src="../assets/img/dataset/data_number.png" style="display:block;margin: 0 auto"/>
+                <table style="text-align: center" class="table table-bordered">
+                  <thead>
+                    <th style="text-align: center; font-size: x-large">事件</th>
+                    <th style="text-align: center; font-size: x-large">活动</th>
+                    <th style="text-align: center; font-size: x-large">数量</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2" style="text-align: center; vertical-align: middle; font-size: large">休息</td>
+                      <td>睡觉</td>
+                      <td>399</td>
+                    </tr>
+                    <tr>
+                      <td>小憩</td>
+                      <td>390</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">饮食</td>
+                      <td>吃饭</td>
+                      <td>410</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2" style="text-align: center; vertical-align: middle; font-size: large">做家务</td>
+                      <td>拖地</td>
+                      <td>340</td>
+                    </tr>
+                    <tr>
+                      <td>扫地</td>
+                      <td>347</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2" style="text-align: center; vertical-align: middle; font-size: large">雇员工作</td>
+                      <td>开会</td>
+                      <td>343</td>
+                    </tr>
+                    <tr>
+                      <td>电脑办公</td>
+                      <td>391</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">学习</td>
+                      <td>阅读</td>
+                      <td>388</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">沟通与交流</td>
+                      <td>打电话</td>
+                      <td>382</td>
+                    </tr>
+                    <tr>
+                      <td>在线聊天</td>
+                      <td>382</td>
+                    </tr>
+                    <tr>
+                      <td>谈话</td>
+                      <td>373</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">娱乐</td>
+                      <td>看电视</td>
+                      <td>392</td>
+                    </tr>
+                    <tr>
+                      <td>听音乐</td>
+                      <td>386</td>
+                    </tr>
+                    <tr>
+                      <td>玩游戏</td>
+                      <td>390</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">锻炼身体</td>
+                      <td>跑步</td>
+                      <td>380</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">通勤</td>
+                      <td>走路</td>
+                      <td>413</td>
+                    </tr>
+
+                  </tbody>
+
+
+                  <!-- <tbody>
+                    <tr>
+                      <td rowspan="6" style="text-align: center; vertical-align: middle; font-size: large">智能手机</td>
+                      <td>加速度</td>
+                    </tr>
+                    <tr>
+                      <td>陀螺仪</td>
+                    </tr>
+                    <tr>
+                      <td>天气信息</td>
+                    </tr>
+                    <tr>
+                      <td>GPS</td>
+                    </tr>
+                    <tr>
+                      <td>图片</td>
+                    </tr>
+                    <tr>
+                      <td>App使用情况</td>
+                    </tr>
+                      <td rowspan="2" style="text-align-all: center; vertical-align: middle; font-size: large">智能手环</td>
+                      <td>心率</td>
+                    </tr>
+                    <tr>
+                      <td>步数</td>
+                    </tr>
+                  </tbody> -->
+                </table>
+                <!-- <img src="../assets/img/dataset/data_number.png" style="display:block;margin: 0 auto"/> -->
 
               </div>
             </div>
@@ -156,7 +267,18 @@
       </div>
     </section>
   </main><!-- End #main -->
-
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+      <!-- 弹窗内容 -->
+      <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+              <a id="showConfirmBtn"  href="https://drive.google.com/file/d/1m7Qij9xqZfkDsP9TRBDqN6dI1XofUc18/view" target="_blank">确认</a>
+              <span id="showConcelmBtn" href="html/1start.html">取消</span>
+          </div>
+      </div>
+  </div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
@@ -168,9 +290,120 @@
   <script src="../assets/vendor/venobox/venobox.min.js"></script>
   <script src="../assets/vendor/aos/aos.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+   <!-- Template Main JS File -->
+   <script src="../assets/js/main.js"></script>
 
-</body>
-
-</html>
+   <script>
+ 
+     window.onload = function () {
+     const obj = {
+         titile: '提示',
+         content: '请确保网络可访问谷歌云盘，如可以访问请点击“确认”进行下载，否则请点击“取消”退出下载界面',
+         showConfirmBtn: true,
+         showCancelBtn: true,
+     }
+     
+     var modal = document.getElementById('myModal'); // 获取弹窗
+     var btn = document.getElementById("myBtn");// 打开弹窗的按钮对象
+     var firm = document.getElementById("showConfirmBtn");//确认
+     var cel = document.getElementById("showConcelmBtn");//取消
+     var close = document.querySelector(".modal-footer");// 获取  元素，用于关闭弹窗
+     
+     function init() {
+         const b = [];
+         for (const key in obj) {
+             b.push(obj[key]);
+         }
+         document.querySelector(".modal-header").innerHTML = `<h1 >${b[0]}</h1>`;
+         document.querySelector(".modal-body").innerHTML = `<p >${b[1]}</p>`;
+         b[2] === true ?"":firm.style.display = "none";
+         b[3] === true ?"":cel.style.display = "none";
+     }    
+     
+     btn.addEventListener("click", function (ev) {
+         modal.style.display = "block";
+         close.addEventListener("click", function (ev) {
+         var target = ev.target;
+     if (target.id === "showConcelmBtn") {
+         closeall("取消");
+     }
+     if(target.id === "showConfirmBtn"){
+         closeall("确定");
+     }
+     })
+     })
+     
+     function closeall(btn){
+         modal.style.display = "none";
+         setTimeout(function(){});
+     }
+     init();
+     }
+     
+     </script>
+     </body>
+     <style>
+       /* 弹窗 (background) */
+       .modal {
+           display: none;
+           /* 默认隐藏 */
+           position: fixed;
+           z-index: 1;
+           padding-top: 100px;
+           left: 0;
+           top: 0;
+           width: 100%;
+           height: 100%;
+           overflow: auto;
+           background-color: rgba(0, 0, 0, 0.4);
+       }
+       /* 弹窗内容 */
+       .modal-content {
+           position: relative;
+           background-color: #fefefe;
+           margin: auto;
+           padding: 0;
+           border: 1px solid #888;
+           border-radius: 20px;
+           width: 35%;
+           height: 30%;
+           box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+           animation: animatetop 0.4s
+       }
+       /* 添加动画 */
+       @keyframes animatetop {
+           from {
+               top: -300px;
+               opacity: 0
+           }
+           to {
+               top: 0;
+               opacity: 1
+           }
+       }
+       #showConfirmBtn:hover,
+       #showConcelmBtn:hover {
+           color: #5b88b4;
+           text-decoration: none;
+           cursor: pointer;
+       }
+       .modal-header {
+           color: #5b88b4;
+           position: absolute;
+           top:-5px;left: 5%;
+       }
+       .modal-body {
+           position: absolute;
+           top: 40%;
+           left: 10%;
+       }
+       .modal-footer {
+           text-align: right;
+           color: #409eff;
+           position: absolute;
+           top: 83%;
+           right: 5%;
+       }
+     </style>
+     
+     </html>

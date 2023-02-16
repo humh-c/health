@@ -52,14 +52,12 @@
           <li><a href="2project.html">项目特色</a></li>
           <li><a href="3function_show.html">功能展示</a></li>
           <li><a href="4dataset_show.html">数据集介绍</a></li>
-          <!-- <li><a href="#pricing">Pricing</a></li> -->
           <li><a href="5plan.html">计划安排</a></li>
           <li><a href="6member.html">成员</a></li>
-          <li><a href="7result_show.html">成果展示</a></li>
-          <li><a href="8download.html">下载</a></li>
-          <li class="active"><a href="9constract_us.html">联系我们</a></li>
+          <li><a href="7result_show.html">研究成果</a></li>
+          <li><a id="myBtn">下载</a></li>
+          <li><a >联系我们</a></li>
 
-          <!-- <li class="get-started"><a href="#features">开始</a></li> -->
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -138,7 +136,18 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+      <!-- 弹窗内容 -->
+      <div class="modal-content">
+          <div class="modal-header"></div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+              <a id="showConfirmBtn"  href="https://drive.google.com/file/d/1m7Qij9xqZfkDsP9TRBDqN6dI1XofUc18/view" target="_blank">确认</a>
+              <span id="showConcelmBtn" href="html/1start.html">取消</span>
+          </div>
+      </div>
+  </div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
@@ -150,9 +159,121 @@
   <script src="../assets/vendor/venobox/venobox.min.js"></script>
   <script src="../assets/vendor/aos/aos.js"></script>
 
+  
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
 
-</body>
+  <script>
 
-</html>
+    window.onload = function () {
+    const obj = {
+        titile: '提示',
+        content: '请确保网络可访问谷歌云盘，如可以访问请点击“确认”进行下载，否则请点击“取消”退出下载界面',
+        showConfirmBtn: true,
+        showCancelBtn: true,
+    }
+    
+    var modal = document.getElementById('myModal'); // 获取弹窗
+    var btn = document.getElementById("myBtn");// 打开弹窗的按钮对象
+    var firm = document.getElementById("showConfirmBtn");//确认
+    var cel = document.getElementById("showConcelmBtn");//取消
+    var close = document.querySelector(".modal-footer");// 获取  元素，用于关闭弹窗
+    
+    function init() {
+        const b = [];
+        for (const key in obj) {
+            b.push(obj[key]);
+        }
+        document.querySelector(".modal-header").innerHTML = `<h1 >${b[0]}</h1>`;
+        document.querySelector(".modal-body").innerHTML = `<p >${b[1]}</p>`;
+        b[2] === true ?"":firm.style.display = "none";
+        b[3] === true ?"":cel.style.display = "none";
+    }    
+    
+    btn.addEventListener("click", function (ev) {
+        modal.style.display = "block";
+        close.addEventListener("click", function (ev) {
+        var target = ev.target;
+    if (target.id === "showConcelmBtn") {
+        closeall("取消");
+    }
+    if(target.id === "showConfirmBtn"){
+        closeall("确定");
+    }
+    })
+    })
+    
+    function closeall(btn){
+        modal.style.display = "none";
+        setTimeout(function(){});
+    }
+    init();
+    }
+    
+    </script>
+    </body>
+    <style>
+      /* 弹窗 (background) */
+      .modal {
+          display: none;
+          /* 默认隐藏 */
+          position: fixed;
+          z-index: 1;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.4);
+      }
+      /* 弹窗内容 */
+      .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          border: 1px solid #888;
+          border-radius: 20px;
+          width: 35%;
+          height: 30%;
+          box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+          animation: animatetop 0.4s
+      }
+      /* 添加动画 */
+      @keyframes animatetop {
+          from {
+              top: -300px;
+              opacity: 0
+          }
+          to {
+              top: 0;
+              opacity: 1
+          }
+      }
+      #showConfirmBtn:hover,
+      #showConcelmBtn:hover {
+          color: #5b88b4;
+          text-decoration: none;
+          cursor: pointer;
+      }
+      .modal-header {
+          color: #5b88b4;
+          position: absolute;
+          top:-5px;left: 5%;
+      }
+      .modal-body {
+          position: absolute;
+          top: 40%;
+          left: 10%;
+      }
+      .modal-footer {
+          text-align: right;
+          color: #409eff;
+          position: absolute;
+          top: 83%;
+          right: 5%;
+      }
+    </style>
+    
+    </html>

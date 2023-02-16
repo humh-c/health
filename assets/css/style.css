@@ -17,6 +17,7 @@ a {
   color: #5777ba;
 }
 
+
 a:hover {
   color: #7b94c9;
   text-decoration: none;
@@ -29,6 +30,9 @@ a:hover {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
+
+
 .back-to-top {
   position: fixed;
   display: none;
@@ -593,6 +597,15 @@ section {
     margin-top: 10px;
     border-radius: 25px;
   }
+}
+
+.row1 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: nowrap !important;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 /*--------------------------------------------------------------
