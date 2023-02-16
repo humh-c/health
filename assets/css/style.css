@@ -599,14 +599,6 @@ section {
   }
 }
 
-.row1 {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: nowrap !important;
-  margin-right: -15px;
-  margin-left: -15px;
-}
 
 /*--------------------------------------------------------------
 # Testimonials
