@@ -82,27 +82,31 @@
 
             <div class="col-xs-3">
               <ul class="nav nav-tabs nav-stacked">
-                <li><a class="active dataset_option" href="#Data_description">数据集描述</a> </li>
-                <li><a class="dataset_option" href="#Data_system">采集系统</a> </li>
+                <li><a class="active dataset_option" href="#MMC-PCL-Activity">MMC-PCL-Activity</a> </li>
+                <li><a class="dataset_option" href="#MFKG & MFQA">MFKG & MFQA</a> </li>
+                <!-- <li><a class="dataset_option" href="#Data_system">采集系统</a> </li>
                 <li><a class="dataset_option" href="#Data_source">数据来源</a> </li>
                 <li><a class="dataset_option" href="#Data_show">数据示例</a> </li>
                 <li><a class="dataset_option" href="#Data_number">数据量</a> </li>
-                <li><a class="dataset_option" href="#Data_download">下载</a> </li>
+                <li><a class="dataset_option" href="#Data_download">下载</a> </li> -->
                 <!-- <li><a class="dataset_option" href="#Data_instruction">说明</a> </li> -->
 
               </ul>
             </div>
 
             <div class="col-xs-6 module-bg">
-              <div>
-                <h2 id="Data_description" style="margin-top: 10px;">数据集描述</h2>
-                <h3 >我们开发了支持多种设备、多种传感器动态适配的实时行为数据自动采集系统，支持设备热插拔。采集了14位学生31天的实时行为数据流，标注了9类日常事件和16类日常活动，共计6944个事件样本。我们采集的连续数据包含8种类型，包括 手环上的心率、步数，手机上的加速度计、陀螺仪、天气、GPS、图像/视频、APP使用情况。</h3>
 
-                <h2></h2>
-                <h2 id="Data_system" style="margin-top: 10px;">采集系统</h2>
+              <div>
+                <h2 id="MMC-PCL-Activity" style="margin-top: 10px;">一.MMC-PCL-Activity</h2>
+                <h3 id="Data_description" style="margin-top: 10px;">1.数据集描述</h3>
+                <h4 >我们开发了支持多种设备、多种传感器动态适配的实时行为数据自动采集系统，支持设备热插拔。采集了14位学生31天的实时行为数据流，标注了9类日常事件和16类日常活动，共计6944个事件样本。我们采集的连续数据包含8种类型，包括 手环上的心率、步数，手机上的加速度计、陀螺仪、天气、GPS、图像/视频、APP使用情况。
+
+                </h4>
+
+                <h3 id="Data_system" style="margin-top: 10px;">2.采集系统</h3>
                 <img style="width: auto; height: auto;" src="../assets/img/dataset/system.jpg" class="img-fluid"/>
 
-                <h2 id="Data_source">数据来源</h2>
+                <h3 id="Data_source">3.数据来源</h3>
 
                 <table style="text-align: center" class="table table-bordered">
                   <thead>
@@ -138,11 +142,11 @@
                   </tbody>
                 </table>
 
-                <h2 id="Data_show" style="margin-top: 10px;">数据示例</h2>
+                <h3 id="Data_show" style="margin-top: 10px;">4.数据示例</h3>
                 <img style="width: auto; height: auto;" src="../assets/img/dataset/dataset_show.png" class="img-fluid"/>
 
 
-                <h2 id="Data_number" style="margin-top: 10px;">数据量</h2>
+                <h3 id="Data_number" style="margin-top: 10px;">5.数据量</h3>
                 <table style="text-align: center" class="table table-bordered">
                   <thead>
                     <th style="text-align: center; font-size: x-large">事件</th>
@@ -229,10 +233,87 @@
                 </table>
 
 
+                <h3 id="Data_download" style="margin-top: 10px;">6.下载</h3>
+                <h4 >数据集已放在谷歌云盘上：<a id="myBtn"><span>MMC-PCL-Activity</span></a></h4>
                 
-                <h2 id="Data_download" style="margin-top: 10px;">下载</h2>
-                <h3 >数据集已放在谷歌云盘上：<a id="myBtn"><span>点击这里</span></a></h3>
-                <!-- <img src="../assets/img/dataset/data_number.png" style="display:block;margin: 0 auto"/> -->
+
+                <h2 id="MFKG & MFQA" style="margin-top: 10px;">二.MFKG & MFQA</h2>
+                <h3 id="Data_description" style="margin-top: 10px;">1.MFKG描述</h3>
+                <h4 >我们从中文食物网站美食杰上爬取了大约127K的食谱，包括43K的食谱成份，304个标签信息和超过1.2M张的食物图片。
+                  将食谱(名字)、食谱成份和食谱标签定义为图谱的实体，将食谱名字、食谱图片、制作流程和营养分析作为食谱实体的属性，并且定义了三种实体之间的三类关系(食谱和食谱成份实体之间的关系—拥有成分(Has_ingredient)，食谱和标签之间的关系—适合该标签(Has_tag)和不适合该标签(Has_tag_neg))。
+                  最终我们获得了一个大约包括171k实体和1.9M条三元组的大型多模态食物知识图谱(MFKG)。
+                  </h4>
+                  <img style="width: auto; height: auto;" src="../assets/img/KG.png" class="img-fluid"/>
+
+                <h3 id="Data_description" style="margin-top: 10px;">2.MFQA数据集描述</h3>
+                  <h4 >通过手工创建模板做替换的方法，我们从知识图谱提取了大量自监督信息构建了一个食物健康领域的问答数据集。
+                  图谱包含三类标签:描述性标签，疾病标签，功能性标签。为了研究食物与健康的关系，我们使用了一种功能性标签减肥和三种疾病类型的标签(高血糖，高血压，高血脂)来构建问题。每一个标签，我们选取了大概1000条“适合该标签”关系和1000条“不适合该标签”关系。最终我们获得了一个超过9000条数据的数据集。我们将该数据集以8:1:1的比例划分为训练，验证和测试集。
+                      </h4>
+                    
+                      <table style="text-align: center" class="table table-bordered">
+                        <thead>
+                          <th style="text-align: center; font-size: x-large">统计类型</th>
+                          <th style="text-align: center; font-size: x-large">数据类型</th>
+                          <th style="text-align: center; font-size: x-large">数据量</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td rowspan="4" style="text-align: center; vertical-align: middle; font-size: large">标注类型</td>
+                            <td>减肥</td>
+                            <td>3476</td>
+                          </tr>
+                          <!-- <tr>
+                            <td>3476</td>
+                          </tr> -->
+                          <!-- <tr>                             -->
+                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">减肥标签类型</td> -->
+                            <!-- <td>3476</td> -->
+                          <!-- </tr> -->
+                          <tr>
+                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">高血糖标签类型</td> -->
+                            <td>高血糖</td>
+                            <td>2000</td>
+                          </tr>
+                          <tr>
+                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">高血压标签类型</td> -->
+                            <td>高血压</td>
+                            <td>2741</td>
+                          </tr>
+                          <tr>
+                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">高血脂标签类型</td> -->
+                            <td>高血脂</td>
+                            <td>2735</td>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">数据分布</td>
+                            <td>训练集</td>
+                            <td>7580</td>
+                          </tr>
+                          <!-- <tr>
+                            <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">训练集</td>
+                            <td>7580</td>
+                          </tr> -->
+                          <tr>
+                            <!-- <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">验证集</td> -->
+                            <td>验证集</td>
+                            <td>948</td>
+                          </tr>
+                          <tr>
+                            <!-- <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">测试集</td> -->
+                            <td>测试集</td>
+                            <td>948</td>
+                          </tr>
+                          <tr>
+                            <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">总计</td>
+                            <td></td>
+                            <td>9476</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                  <h3 id="Data_download" style="margin-top: 10px;">3.下载</h3>
+                      <h4 >数据集已放在百度云盘上：<a href="https://pan.baidu.com/s/1uaE4sbOVHYfrUD4wVsYDXA?pwd=xsoh">MFKG</a>，<a href="https://pan.baidu.com/s/1X3p8YnRznlTqxyornzDoRA?pwd=p75n">MFQA</a>。</h4>
 
               </div>
             </div>
@@ -246,17 +327,17 @@
     </section>
   </main><!-- End #main -->
     <!-- 弹窗 -->
-    <div id="myModal" class="modal">
-      <!-- 弹窗内容 -->
-      <div class="modal-content">
-          <div class="modal-header"></div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-              <a id="showConfirmBtn"  href="https://drive.google.com/file/d/1m7Qij9xqZfkDsP9TRBDqN6dI1XofUc18/view" target="_blank">确认</a>
-              <span id="showConcelmBtn" href="html/1start.html">取消</span>
-          </div>
+<div id="myModal" class="modal">
+  <!-- 弹窗内容 -->
+  <div class="modal-content">
+      <div class="modal-header"></div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+          <a id="showConfirmBtn"  href="https://drive.google.com/file/d/1m7Qij9xqZfkDsP9TRBDqN6dI1XofUc18/view" target="_blank">确认</a>
+          <span id="showConcelmBtn" href="1start.html">取消</span>
       </div>
   </div>
+</div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
