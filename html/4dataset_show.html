@@ -239,15 +239,15 @@
 
                 <h2 id="MFKG & MFQA" style="margin-top: 10px;">二.MFKG & MFQA</h2>
                 <h3 id="Data_description" style="margin-top: 10px;">1.MFKG描述</h3>
-                <h4 >我们从中文食物网站美食杰上爬取了大约127K的食谱，包括43K的食谱成份，304个标签信息和超过1.2M张的食物图片。
-                  将食谱(名字)、食谱成份和食谱标签定义为图谱的实体，将食谱名字、食谱图片、制作流程和营养分析作为食谱实体的属性，并且定义了三种实体之间的三类关系(食谱和食谱成份实体之间的关系—拥有成分(Has_ingredient)，食谱和标签之间的关系—适合该标签(Has_tag)和不适合该标签(Has_tag_neg))。
-                  最终我们获得了一个大约包括171k实体和1.9M条三元组的大型多模态食物知识图谱(MFKG)。
+                <h4 >我们从中文食物网站美食杰上爬取到超过127K的食谱，包括43K个食谱成份、304个标签信息和超过1.2M张的食物图片。
+                  我们将食谱(名字)、食谱成份和食谱标签定义为图谱的实体，将食谱名字、食谱图片、制作流程和营养分析作为食谱实体的属性，并且定义了三种实体之间的三类关系(食谱和食谱成份实体之间的关系—拥有成分(Has_ingredient)，食谱和标签之间的关系—适合该标签(Has_tag)和不适合该标签(Has_tag_neg))。
+                  最终我们得到一个包括超过171k实体和1.9M条三元组的大型多模态食物知识图谱(MFKG)。
                   </h4>
                   <img style="width: auto; height: auto;" src="../assets/img/KG.png" class="img-fluid"/>
 
-                <h3 id="Data_description" style="margin-top: 10px;">2.MFQA数据集描述</h3>
-                  <h4 >通过手工创建模板做替换的方法，我们从知识图谱提取了大量自监督信息构建了一个食物健康领域的问答数据集。
-                  图谱包含三类标签:描述性标签，疾病标签，功能性标签。为了研究食物与健康的关系，我们使用了一种功能性标签减肥和三种疾病类型的标签(高血糖，高血压，高血脂)来构建问题。每一个标签，我们选取了大概1000条“适合该标签”关系和1000条“不适合该标签”关系。最终我们获得了一个超过9000条数据的数据集。我们将该数据集以8:1:1的比例划分为训练，验证和测试集。
+                <h3 id="Data_description" style="margin-top: 10px;">2.MFQA描述</h3>
+                  <h4 >通过手工创建模板做替换的方法，我们从知识图谱提取出大量自监督信息构建了一个食物健康领域的问答数据集。
+                  该图谱包含三类标签:描述性标签，疾病标签，功能性标签。为了研究食物与健康的关系，我们使用一种功能性标签减肥和三种疾病类型的标签(高血糖，高血压，高血脂)来构建问题。每一个标签，我们选取至少1000条“适合该标签”关系和1000条“不适合该标签”关系。最终得到一个9476条数据的数据集，并以8:1:1的比例划分为训练、验证和测试集。
                       </h4>
                     
                       <table style="text-align: center" class="table table-bordered">
@@ -262,53 +262,36 @@
                             <td>减肥</td>
                             <td>3476</td>
                           </tr>
-                          <!-- <tr>
-                            <td>3476</td>
-                          </tr> -->
-                          <!-- <tr>                             -->
-                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">减肥标签类型</td> -->
-                            <!-- <td>3476</td> -->
-                          <!-- </tr> -->
                           <tr>
-                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">高血糖标签类型</td> -->
                             <td>高血糖</td>
                             <td>2000</td>
                           </tr>
                           <tr>
-                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">高血压标签类型</td> -->
                             <td>高血压</td>
                             <td>2741</td>
                           </tr>
                           <tr>
-                            <!-- <td rowspan="1" style="text-align-all: center; vertical-align: middle; font-size: large">高血脂标签类型</td> -->
                             <td>高血脂</td>
                             <td>2735</td>
                           </tr>
-
                           <tr>
-                            <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">数据分布</td>
+                            <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">数据划分</td>
                             <td>训练集</td>
                             <td>7580</td>
                           </tr>
-                          <!-- <tr>
-                            <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">训练集</td>
-                            <td>7580</td>
-                          </tr> -->
                           <tr>
-                            <!-- <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">验证集</td> -->
                             <td>验证集</td>
                             <td>948</td>
                           </tr>
                           <tr>
-                            <!-- <td rowspan="1" style="text-align: center; vertical-align: middle; font-size: large">测试集</td> -->
                             <td>测试集</td>
                             <td>948</td>
                           </tr>
-                          <tr>
+                          <!-- <tr>
                             <td rowspan="3" style="text-align: center; vertical-align: middle; font-size: large">总计</td>
                             <td></td>
                             <td>9476</td>
-                          </tr>
+                          </tr> -->
                         </tbody>
                       </table>
 
